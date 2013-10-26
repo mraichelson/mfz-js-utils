@@ -7,7 +7,7 @@ var MFZ;
 MFZ = require('../mfz.utils.js');
 
 console.log('rolling two d6.');
-var my2d6 = MFZ.dice.rollNdX(2);
+var my2d6 = MFZ.dice.rollNdX(2); // rollNdX defaults to 6-sided dice.
 console.log(my2d6);
 
 console.log('rolling one d8.');
