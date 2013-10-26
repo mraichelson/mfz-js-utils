@@ -6,7 +6,7 @@ var MFZ;
 MFZ = require('../mfz.utils.js');
 
 /**
- * Assumption: Two frames with one a standard "soldier" loadout.
+ * Assumption: Two frames both with a standard "soldier" loadout.
  * Assumption: Each frame is attacking the opposite and a different
  *   frame has applied a spotting die to them (with the value 
  *   rolled below).
