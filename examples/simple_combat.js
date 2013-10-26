@@ -14,16 +14,16 @@ MFZ = require('../mfz.utils.js');
  */
 var attacker, defender, useDamageChart;
 attacker = {
-  red : MFZ.dice.getResult(MFZ.dice.rollNdX(2)),
-  blue : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
+  red    : MFZ.dice.getResult(MFZ.dice.rollNdX(2)),
+  blue   : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
   yellow : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
-  green : MFZ.dice.getResult(MFZ.dice.rollNdX(1))
+  green  : MFZ.dice.getResult(MFZ.dice.rollNdX(1))
 };
 defender = {
-  red : MFZ.dice.getResult(MFZ.dice.rollNdX(2)),
-  blue : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
+  red    : MFZ.dice.getResult(MFZ.dice.rollNdX(2)),
+  blue   : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
   yellow : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
-  green : MFZ.dice.getResult(MFZ.dice.rollNdX(1))
+  green  : MFZ.dice.getResult(MFZ.dice.rollNdX(1))
 };
 useDamageChart = 'standard'; // which damage chart to use.
 
