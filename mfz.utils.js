@@ -7,12 +7,12 @@
 /**
  * Global MFZ object for attaching utilities to.
  */
-var MFZ = {};
+// var MFZ = {};
 
 /**
  * Shared configuration settings.
  */
-MFZ.conf = {
+exports.conf = {
   // Standard values used for scoring.
   score : {
     assetBase     : 5, // Score Per Asset base.
@@ -24,19 +24,42 @@ MFZ.conf = {
 /**
  * Strings of text (so they can be replaced globally).
  */
-MFZ.strings = {
+exports.strings = {
   // damage result descriptions
   damage : {
     cover : 'Attack damaged cover.',
     frame : 'Attack damaged frame.',
     none  : 'Attack did no damage.'
+  },
+  // system effect descriptions
+  system : {
+    blue : [
+      'Must use wild dice for defense.',
+      'Receives one Blue die for defense.',
+      'Receives two Blue dice for defense. May act as cover to other frames without taking damage.'
+    ],
+    green : [
+      'Must use wild dice for movement.',
+      'Receives one Green die for movement. May move through cover.',
+      'Receives two Green dice for movement. May move through cover.'
+    ],
+    red : [
+      'Must use wild dice for attacks. May only attack targets in melee range.',
+      'Receives two red dice against targets at the specified range.',
+      'Receives two red dice and one red d8 against targets at the specified range.'
+    ],
+    yellow : [
+      'Must use wild dice for spotting. May not spot targets in cover. May only spot targets in direct-fire range.',
+      'Receives one Yellow die for spotting. May spot targets in cover in direct-fire range.',
+      'Receives two Yellow dice for spotting. May spot targets in cover with no range restriction.'
+    ]
   }
 };
 
 /**
  * Tools for handling the dice used in the an MFZ game.
  */
-MFZ.dice = {
+exports.dice = {
   /**
    * Rolls N dice with X sides (NdX)
    *
@@ -82,8 +105,8 @@ MFZ.dice = {
    */
   rollDamage : function(dice, chart) {
     var damageChart, rolls, results;
-    damageChart = MFZ.charts.damage(chart);
-    rolls = MFZ.dice.rollNdX(dice, 6);
+    damageChart = exports.charts.damage(chart);
+    rolls = exports.dice.rollNdX(dice, 6);
     results = [];
     rolls.forEach(function(roll) {
       results.push(damageChart[roll]);
@@ -103,7 +126,7 @@ MFZ.dice = {
 /**
  * Charts used in the process of playing the game.
  */
-MFZ.charts = {
+exports.charts = {
   /**
    * Damage roll result charts.
    *
