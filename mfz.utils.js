@@ -5,11 +5,6 @@
  */
 
 /**
- * Global MFZ object for attaching utilities to.
- */
-// var MFZ = {};
-
-/**
  * Shared configuration settings.
  */
 exports.conf = {
@@ -142,25 +137,25 @@ exports.charts = {
     outcomes = [];
     switch(chart) {
       case 'standard':
-        outcomes[1] = 'no result';
-        outcomes[2] = 'no result';
-        outcomes[3] = 'no result';
-        outcomes[4] = 'no result';
+        outcomes[1] = 'none';
+        outcomes[2] = 'none';
+        outcomes[3] = 'none';
+        outcomes[4] = 'none';
         outcomes[5] = 'damage';
         outcomes[6] = 'damage';
       break;
       case 'cover':
-        outcomes[1] = 'no result';
-        outcomes[2] = 'no result';
-        outcomes[3] = 'no result';
+        outcomes[1] = 'none';
+        outcomes[2] = 'none';
+        outcomes[3] = 'none';
         outcomes[4] = 'cover';
         outcomes[5] = 'cover';
         outcomes[6] = 'damage';
       break;
       case 'melee':
-        outcomes[1] = 'no result';
-        outcomes[2] = 'no result';
-        outcomes[3] = 'no result';
+        outcomes[1] = 'none';
+        outcomes[2] = 'none';
+        outcomes[3] = 'none';
         outcomes[4] = 'damage';
         outcomes[5] = 'damage';
         outcomes[6] = 'damage';
