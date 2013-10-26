@@ -12,7 +12,7 @@ MFZ = require('../mfz.utils.js');
  *   rolled below).
  * Ignore wild dice for the moment.
  */
-var attacker, defender, chart;
+var attacker, defender, useDamageChart;
 attacker = {
   red : MFZ.dice.getResult(MFZ.dice.rollNdX(2)),
   blue : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
@@ -25,7 +25,7 @@ defender = {
   yellow : MFZ.dice.getResult(MFZ.dice.rollNdX(1)),
   green : MFZ.dice.getResult(MFZ.dice.rollNdX(1))
 };
-chart = 'standard'; // which damage chart to use.
+useDamageChart = 'standard'; // which damage chart to use.
 
 console.log('Attacker');
 console.log(attacker);
@@ -36,7 +36,7 @@ console.log('----');
 console.log('Resolving initial attack...');
 if (attacker.red + attacker.yellow > defender.blue) {
   console.log('Attacker: Attack successful');
-  var damageResult = MFZ.dice.rollDamage(attacker.red + attacker.yellow - defender.blue, chart);
+  var damageResult = MFZ.dice.rollDamage(attacker.red + attacker.yellow - defender.blue, useDamageChart);
   console.log('Damage result: ' + damageResult);
 }
 else {
@@ -46,7 +46,7 @@ else {
 console.log('Resolving retaliatory attack...');
 if (defender.red + defender.yellow > attacker.blue) {
   console.log('Defender: Attack successful');
-  var damageResult = MFZ.dice.rollDamage(defender.red + defender.yellow - attacker.blue, chart);
+  var damageResult = MFZ.dice.rollDamage(defender.red + defender.yellow - attacker.blue, useDamageChart);
   console.log('Damage result: ' + damageResult);
 }
 else {
