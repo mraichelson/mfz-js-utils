@@ -141,8 +141,8 @@ exports.charts = {
         outcomes[2] = 'none';
         outcomes[3] = 'none';
         outcomes[4] = 'none';
-        outcomes[5] = 'damage';
-        outcomes[6] = 'damage';
+        outcomes[5] = 'frame';
+        outcomes[6] = 'frame';
       break;
       case 'cover':
         outcomes[1] = 'none';
@@ -150,15 +150,15 @@ exports.charts = {
         outcomes[3] = 'none';
         outcomes[4] = 'cover';
         outcomes[5] = 'cover';
-        outcomes[6] = 'damage';
+        outcomes[6] = 'frame';
       break;
       case 'melee':
         outcomes[1] = 'none';
         outcomes[2] = 'none';
         outcomes[3] = 'none';
-        outcomes[4] = 'damage';
-        outcomes[5] = 'damage';
-        outcomes[6] = 'damage';
+        outcomes[4] = 'frame';
+        outcomes[5] = 'frame';
+        outcomes[6] = 'frame';
       break;
     }
     return outcomes;
