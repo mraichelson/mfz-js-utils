@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>MFZ Utils Browser Use Example</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- 
+    Including the mfz.utils.js script will automatically 
+    create a global MFZ object.
+  -->
+  <script src="../mfz.utils.js"></script>
+  <script>
+  $(function () {
+    var my2d6 = MFZ.dice.rollNdX(2);
+    var my1d8 = MFZ.dice.rollNdX(1, 8);
+    var myAttackDice = [];
+    myAttackDice = myAttackDice.concat(my2d6, my1d8);
+    var myAttackRoll = MFZ.dice.getResult(myAttackDice);
+    $('h1 em').text(myAttackRoll);
+  });
+  </script>
+</head>
+<body>
+  <h1>The attack value result of rolling 2d6 + 1d8 is: <em></em></h1>
+</body>
+</html>
