@@ -2,6 +2,7 @@
   "name" : "mfz-js-utils",
   "author" : "Michael Raichelson <i.am@michaelraichelson.com>",
   "description" : "JS utilities for actions taken during a game of Mobile Frame Zero.",
+  "version" : "0.1.0",
   "contributors" : [
     {
       "name" : "Michael Raichelson",
@@ -15,5 +16,8 @@
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/mraichelson/mfz-js-utils.git"
+  },
+  "engines" : {
+    "node" : "*"
   }
 }
